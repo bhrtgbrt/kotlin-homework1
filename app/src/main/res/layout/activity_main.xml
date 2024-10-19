@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="請輸入姓名已開始遊戲"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/edname"
+        app:layout_constraintTop_toBottomOf="@+id/edname"/>
+
+    <EditText
+        android:id="@+id/edname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="請輸入玩家姓名"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:id="@+id/RadioGroup"
+        app:layout_constraintStart_toStartOf="@id/tvtext"
+        app:layout_constraintTop_toBottomOf="@id/tvtext">
+
+        <RadioButton
+            android:id="@+id/btnscissor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="剪刀" />
+
+        <RadioButton
+            android:id="@+id/btnstone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="石頭" />
+
+        <RadioButton
+            android:id="@+id/btnpaper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="布" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnmora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="猜拳"
+        app:layout_constraintStart_toStartOf="@id/RadioGroup"
+        app:layout_constraintTop_toBottomOf="@id/RadioGroup"/>
+
+    <TextView
+        android:id="@+id/tvname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="名字"
+        app:layout_constraintStart_toStartOf="@id/btnmora"
+        app:layout_constraintTop_toBottomOf="@id/btnmora"/>
+
+    <TextView
+        android:id="@+id/tvwinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="勝利者"
+        app:layout_constraintStart_toEndOf="@id/tvname"
+        app:layout_constraintTop_toTopOf="@id/tvname"/>
+
+    <TextView
+        android:id="@+id/tvmmora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="我方出拳"
+        app:layout_constraintStart_toEndOf="@id/tvwinner"
+        app:layout_constraintTop_toTopOf="@id/tvname"/>
+
+    <TextView
+        android:id="@+id/tvcmora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="電腦出拳"
+        app:layout_constraintStart_toEndOf="@id/tvmmora"
+        app:layout_constraintTop_toTopOf="@id/tvname"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
